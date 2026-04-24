@@ -77,17 +77,28 @@ header {
 }
 
 .logo-box {
-    width: 120px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.5);
-    border: 2px dashed var(--primary-dark);
-    border-radius: 15px;
+    width: 130px;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
-    color: var(--primary-dark);
-    backdrop-filter: blur(5px);
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.logo-box:hover {
+    transform: translateY(-5px);
+}
+
+.logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 h1 {
