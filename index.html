@@ -12,6 +12,13 @@
     <div class="background">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="" alt="" id="lightboxImg">
     </div>
 
     <div class="container">
@@ -29,15 +36,18 @@
                 <button class="tab-btn active" data-tab="tab-idea">Project Idea</button>
                 <button class="tab-btn" data-tab="tab-plan">Planning</button>
                 <button class="tab-btn" data-tab="tab-steps">Execution Steps</button>
-                <button class="tab-btn" data-tab="tab-course">Course Information</button>
-                <button class="tab-btn" data-tab="tab-team">Team Members</button>
+                <button class="tab-btn" data-tab="tab-results">Results</button>
+                <button class="tab-btn" data-tab="tab-course">Course Info</button>
+                <button class="tab-btn" data-tab="tab-team">Team</button>
             </nav>
         </header>
 
         <main class="content-area">
+
+            <!-- Tab 1: Project Idea -->
             <section id="tab-idea" class="tab-content active">
                 <h2>Project Idea</h2>
-                <div class="large-text-box" id="text1">
+                <div class="large-text-box">
                     <h3>Compact Peltier-Based Air Cooling System</h3>
                     <p>Our project focuses on the development of a localized, solid-state air cooler utilizing the
                         thermoelectric (Peltier) effect. By applying DC power, the system creates a high-efficiency
@@ -47,162 +57,251 @@
                         sustainable alternative to traditional cooling methods.</p>
                 </div>
                 <div class="images-grid-3">
-                    <div class="image-box">
-                        <img src="assets/images/image1.jpg" alt="Idea Image 1">
-                    </div>
-                    <div class="image-box">
-                        <img src="assets/images/image2.jpg" alt="Idea Image 2">
-                    </div>
-                    <div class="image-box">
-                        <img src="assets/images/image3.jpg" alt="Idea Image 3">
-                    </div>
+                    <div class="image-box"><img src="(Bulk 1) image/1.png" alt="Concept Image 1"></div>
+                    <div class="image-box"><img src="(Bulk 1) image/2.png" alt="Concept Image 2"></div>
+                    <div class="image-box"><img src="(Bulk 1) image/3.png" alt="Concept Image 3"></div>
                 </div>
             </section>
 
+            <!-- Tab 2: Planning -->
             <section id="tab-plan" class="tab-content">
                 <h2>Planning</h2>
-                <div class="large-text-box" id="text2">
-                    <p>text2</p>
+                <div class="large-text-box">
+                    <h3>System Design &amp; Component Selection</h3>
+                    <p>The planning phase involved selecting the optimal components to maximize cooling efficiency while
+                        keeping the design compact and affordable. The core of our system is the
+                        <strong>TEC1-12706 Peltier module</strong>, capable of generating a significant temperature
+                        differential when supplied with 12V DC. We designed a dual-zone thermal architecture: a cold
+                        side connected to an air duct with an intake fan, and a hot side with an aluminum heat sink and
+                        an exhaust fan to expel waste heat.
+                    </p>
+                    <ul>
+                        <li><strong>Peltier Module:</strong> TEC1-12706 (12V, 6A, max &Delta;T &asymp; 66&deg;C)</li>
+                        <li><strong>Heat Sinks:</strong> Aluminum fin-type, both cold &amp; hot sides</li>
+                        <li><strong>Fans:</strong> 2&times; 80mm DC brushless fans (intake &amp; exhaust)</li>
+                        <li><strong>Power Supply:</strong> 12V / 10A regulated DC PSU</li>
+                        <li><strong>Housing:</strong> Compact acrylic enclosure with air vents</li>
+                    </ul>
                 </div>
                 <div class="images-grid-3">
-                    <div class="image-box">
-                        <img src="(Bulk 1) image/4.png" alt="Plan Image 1">
-                    </div>
-                    <div class="image-box">
-                        <img src="(Bulk 1) image/5.png" alt="Plan Image 2">
-                    </div>
-                    <div class="image-box">
-                        <img src="(Bulk 1) image/6.png" alt="Plan Image 3">
-                    </div>
+                    <div class="image-box"><img src="(Bulk 1) image/4.png" alt="Planning Image 1"></div>
+                    <div class="image-box"><img src="(Bulk 1) image/5.png" alt="Planning Image 2"></div>
+                    <div class="image-box"><img src="(Bulk 1) image/6.png" alt="Planning Image 3"></div>
                 </div>
             </section>
 
+            <!-- Tab 3: Execution Steps -->
             <section id="tab-steps" class="tab-content">
                 <h2>Execution Steps</h2>
-                <div class="large-text-box" id="text3">
-                    <p>text3</p>
+                <div class="large-text-box">
+                    <p>The build was carried out in six structured stages, from component assembly through final testing
+                        and enclosure. Each stage was documented to ensure reproducibility and to track any deviations
+                        from the original design specifications.</p>
                 </div>
                 <div class="steps-grid">
                     <div class="step-card">
-                        <div class="step-text" id="text4">
-                            <p>text4</p>
+                        <div class="step-badge">1</div>
+                        <div class="step-text">
+                            <h4>Mount Peltier Module</h4>
+                            <p>Applied thermal paste on both sides of the TEC1-12706 and clamped it between two
+                                aluminum heat sinks using screws to ensure maximum thermal contact and minimal
+                                interface resistance.</p>
                         </div>
                         <div class="step-img-box"><img src="(Bulk 1) image/7.png" alt="Step 1"></div>
                     </div>
                     <div class="step-card">
-                        <div class="step-text" id="text5">
-                            <p>text5</p>
+                        <div class="step-badge">2</div>
+                        <div class="step-text">
+                            <h4>Hot-Side Cooling</h4>
+                            <p>Attached an 80mm exhaust fan to the hot-side heat sink to continuously dissipate waste
+                                heat, preventing thermal runaway and maintaining stable Peltier performance.</p>
                         </div>
                         <div class="step-img-box"><img src="(Bulk 1) image/8.png" alt="Step 2"></div>
                     </div>
                     <div class="step-card">
-                        <div class="step-text" id="text6">
-                            <p>text6</p>
+                        <div class="step-badge">3</div>
+                        <div class="step-text">
+                            <h4>Air Duct Assembly</h4>
+                            <p>Constructed the cold-side air channel using acrylic panels. An 80mm intake fan draws
+                                ambient air over the cold heat sink, chilling it before it exits through the front
+                                vent.</p>
                         </div>
                         <div class="step-img-box"><img src="(Bulk 1) image/9.png" alt="Step 3"></div>
                     </div>
                     <div class="step-card">
-                        <div class="step-text" id="text7">
-                            <p>text7</p>
+                        <div class="step-badge">4</div>
+                        <div class="step-text">
+                            <h4>Electrical Wiring</h4>
+                            <p>Connected the 12V regulated PSU to the Peltier module (observing correct polarity) and
+                                both fans. Used a connector block for neat and safe terminations.</p>
                         </div>
                         <div class="step-img-box"><img src="(Bulk 1) image/10.png" alt="Step 4"></div>
                     </div>
                     <div class="step-card">
-                        <div class="step-text" id="text8">
-                            <p>text8</p>
+                        <div class="step-badge">5</div>
+                        <div class="step-text">
+                            <h4>Testing &amp; Calibration</h4>
+                            <p>Used a K-type thermocouple with a digital meter to measure cold-side, hot-side, and
+                                ambient temperatures under steady-state conditions to verify ΔT targets were met.</p>
                         </div>
                         <div class="step-img-box"><img src="(Bulk 1) image/11.png" alt="Step 5"></div>
                     </div>
                     <div class="step-card">
-                        <div class="step-text" id="text9">
-                            <p>text9</p>
+                        <div class="step-badge">6</div>
+                        <div class="step-text">
+                            <h4>Final Enclosure</h4>
+                            <p>Assembled the full housing, secured all components, applied insulation foam around the
+                                cold duct to minimize heat ingress, and performed final safety and performance
+                                checks.</p>
                         </div>
                         <div class="step-img-box"><img src="(Bulk 1) image/12.png" alt="Step 6"></div>
                     </div>
                 </div>
             </section>
 
+            <!-- Tab 4: Results & Statistics -->
+            <section id="tab-results" class="tab-content">
+                <h2>Results &amp; Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">&#127777;</div>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-unit">&deg;C</div>
+                        <div class="stat-label">Temperature Drop (&#916;T)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#9889;</div>
+                        <div class="stat-number" data-target="60">0</div>
+                        <div class="stat-unit">W</div>
+                        <div class="stat-label">Input Power</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#10052;</div>
+                        <div class="stat-number" data-target="20">0</div>
+                        <div class="stat-unit">&deg;C</div>
+                        <div class="stat-label">Cold Side Temperature</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#128266;</div>
+                        <div class="stat-number" data-target="45">0</div>
+                        <div class="stat-unit">dB</div>
+                        <div class="stat-label">Max Noise Level</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#128176;</div>
+                        <div class="stat-number" data-target="350">0</div>
+                        <div class="stat-unit">EGP</div>
+                        <div class="stat-label">Total Build Cost</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">&#128736;</div>
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-unit">+</div>
+                        <div class="stat-label">Core Components</div>
+                    </div>
+                </div>
+                <div class="images-grid-4">
+                    <div class="image-box"><img src="(Bulk 1) image/13.png" alt="Result Image 1"></div>
+                    <div class="image-box"><img src="(Bulk 1) image/14.png" alt="Result Image 2"></div>
+                    <div class="image-box"><img src="(Bulk 1) image/15.png" alt="Result Image 3"></div>
+                    <div class="image-box"><img src="(Bulk 1) image/16.png" alt="Result Image 4"></div>
+                </div>
+            </section>
+
+            <!-- Tab 5: Course Information -->
             <section id="tab-course" class="tab-content">
                 <h2>Course Information</h2>
                 <div class="course-info-container">
                     <div class="info-card">
-                        <div class="info-icon">📘</div>
+                        <div class="info-icon">&#128216;</div>
                         <div class="info-label">Course Name</div>
-                        <div class="info-value">MEC 131 - Thermodynamics</div>
+                        <div class="info-value">MEC 131 &mdash; Thermodynamics</div>
                     </div>
                     <div class="info-card">
-                        <div class="info-icon">👨‍🏫</div>
+                        <div class="info-icon">&#128104;&#8205;&#127979;</div>
                         <div class="info-label">Instructor</div>
                         <div class="info-value">Prof. Osama Ahmed Ali Al-Samni</div>
                     </div>
                     <div class="info-card">
-                        <div class="info-icon">🎓</div>
+                        <div class="info-icon">&#127891;</div>
                         <div class="info-label">Teaching Assistant</div>
                         <div class="info-value">Yahia Abdelhai Mokhtar Ibrahim</div>
                     </div>
                     <div class="info-card">
-                        <div class="info-icon">📅</div>
+                        <div class="info-icon">&#128197;</div>
                         <div class="info-label">Semester</div>
-                        <div class="info-value">Spring 2025-2026</div>
+                        <div class="info-value">Spring 2025&ndash;2026</div>
                     </div>
                     <div class="info-card">
-                        <div class="info-icon">🏛️</div>
+                        <div class="info-icon">&#127963;</div>
                         <div class="info-label">Department</div>
                         <div class="info-value">Mechatronics Engineering</div>
                     </div>
                 </div>
             </section>
 
+            <!-- Tab 6: Team Members -->
             <section id="tab-team" class="tab-content">
                 <h2>Team Members</h2>
                 <div class="team-grid">
                     <div class="team-member">
-                        <h3 dir="rtl">👨 حسن السيد السيد محمد عجيزة</h3>
+                        <div class="team-avatar">&#128104;</div>
+                        <h3 dir="rtl">&#1581;&#1587;&#1606; &#1575;&#1604;&#1587;&#1610;&#1583; &#1575;&#1604;&#1587;&#1610;&#1583; &#1605;&#1581;&#1605;&#1583; &#1593;&#1580;&#1610;&#1586;&#1577;</h3>
                         <p>ID: 1241219</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👩 منة الله محمد إبراهيم العشري</h3>
+                        <div class="team-avatar">&#128105;</div>
+                        <h3 dir="rtl">&#1605;&#1606;&#1577; &#1575;&#1604;&#1604;&#1607; &#1605;&#1581;&#1605;&#1583; &#1573;&#1576;&#1585;&#1575;&#1607;&#1610;&#1605; &#1575;&#1604;&#1593;&#1588;&#1585;&#1610;</h3>
                         <p>ID: 1241003</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👨 عمر شاكر عاطف علي</h3>
+                        <div class="team-avatar">&#128104;</div>
+                        <h3 dir="rtl">&#1593;&#1605;&#1585; &#1588;&#1575;&#1603;&#1585; &#1593;&#1575;&#1591;&#1601; &#1593;&#1604;&#1610;</h3>
                         <p>ID: 1241061</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👨 محمود احمد عبد الشكور ابراهيم</h3>
+                        <div class="team-avatar">&#128104;</div>
+                        <h3 dir="rtl">&#1605;&#1581;&#1605;&#1608;&#1583; &#1575;&#1581;&#1605;&#1583; &#1593;&#1576;&#1583; &#1575;&#1604;&#1588;&#1603;&#1608;&#1585; &#1575;&#1576;&#1585;&#1575;&#1607;&#1610;&#1605;</h3>
                         <p>ID: 1241510</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👩 نورهان محمود عبده محمد</h3>
+                        <div class="team-avatar">&#128105;</div>
+                        <h3 dir="rtl">&#1606;&#1608;&#1585;&#1607;&#1575;&#1606; &#1605;&#1581;&#1605;&#1608;&#1583; &#1593;&#1576;&#1583;&#1607; &#1605;&#1581;&#1605;&#1583;</h3>
                         <p>ID: 1241200</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👩 روان عادل الجوهري حسين</h3>
+                        <div class="team-avatar">&#128105;</div>
+                        <h3 dir="rtl">&#1585;&#1608;&#1575;&#1606; &#1593;&#1575;&#1583;&#1604; &#1575;&#1604;&#1580;&#1608;&#1607;&#1585;&#1610; &#1581;&#1587;&#1610;&#1606;</h3>
                         <p>ID: 1241058</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👩 رغد وائل المتولى السيد</h3>
+                        <div class="team-avatar">&#128105;</div>
+                        <h3 dir="rtl">&#1585;&#1594;&#1583; &#1608;&#1575;&#1574;&#1604; &#1575;&#1604;&#1605;&#1578;&#1608;&#1604;&#1609; &#1575;&#1604;&#1587;&#1610;&#1583;</h3>
                         <p>ID: 1241520</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👩 جودى محمد السيد السيد طارة</h3>
+                        <div class="team-avatar">&#128105;</div>
+                        <h3 dir="rtl">&#1580;&#1608;&#1583;&#1609; &#1605;&#1581;&#1605;&#1583; &#1575;&#1604;&#1587;&#1610;&#1583; &#1575;&#1604;&#1587;&#1610;&#1583; &#1591;&#1575;&#1585;&#1577;</h3>
                         <p>ID: 1241397</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👨 محمد ابراهيم عبد الرازق ابراهيم القاضي</h3>
+                        <div class="team-avatar">&#128104;</div>
+                        <h3 dir="rtl">&#1605;&#1581;&#1605;&#1583; &#1575;&#1576;&#1585;&#1575;&#1607;&#1610;&#1605; &#1593;&#1576;&#1583; &#1575;&#1604;&#1585;&#1575;&#1586;&#1602; &#1575;&#1576;&#1585;&#1575;&#1607;&#1610;&#1605; &#1575;&#1604;&#1602;&#1575;&#1590;&#1610;</h3>
                         <p>ID: 1241141</p>
                     </div>
                     <div class="team-member">
-                        <h3 dir="rtl">👨 عمر يوسف عبدالله ابراهيم</h3>
+                        <div class="team-avatar">&#128104;</div>
+                        <h3 dir="rtl">&#1593;&#1605;&#1585; &#1610;&#1608;&#1587;&#1601; &#1593;&#1576;&#1583;&#1575;&#1604;&#1604;&#1607; &#1575;&#1576;&#1585;&#1575;&#1607;&#1610;&#1605;</h3>
                         <p>ID: 1241419</p>
                     </div>
                 </div>
             </section>
+
         </main>
 
         <footer>
-            <p>Created by Omar El Shazly</p>
-            <p>Email: omairelshazly@gmail.com</p>
+            <p>Peltier-Based Portable AC &mdash; Thermodynamics Project &middot; Spring 2025&ndash;2026</p>
+            <p>Created by Omar El Shazly &middot; <a href="mailto:omairelshazly@gmail.com">omairelshazly@gmail.com</a></p>
         </footer>
     </div>
 
