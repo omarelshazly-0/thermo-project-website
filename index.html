@@ -4,207 +4,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peltier-Based Portable AC</title>
+    <meta name="description" content="Peltier-Based Portable AC — A thermodynamics engineering project utilizing thermoelectric cooling for eco-friendly, solid-state air conditioning.">
+    <title>Peltier-Based Portable AC | Thermodynamics Project</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
 </head>
 
 <body>
-    <div class="background">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
+
+    <!-- ============ BACKGROUND EFFECTS ============ -->
+    <div class="bg-effects" aria-hidden="true">
+        <div class="bg-orb bg-orb--cyan"></div>
+        <div class="bg-orb bg-orb--violet"></div>
+        <div class="bg-orb bg-orb--small"></div>
     </div>
 
-    <div class="container">
-        <header>
-            <div class="logos">
-                <div class="logo-box">
-                    <img src="assets/logos/univ logo.png" alt="University Logo">
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <img src="assets/logos/univ logo.png" alt="University Logo" class="nav-logo">
+            <span class="nav-title">Peltier AC</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#idea">Idea</a></li>
+            <li><a href="#planning">Planning</a></li>
+            <li><a href="#steps">Steps</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ============ MOBILE MENU ============ -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#idea"><span class="menu-icon">💡</span> Project Idea</a>
+        <a href="#planning"><span class="menu-icon">📋</span> Planning</a>
+        <a href="#steps"><span class="menu-icon">⚙️</span> Execution Steps</a>
+        <a href="#results"><span class="menu-icon">📊</span> Results</a>
+        <a href="#course"><span class="menu-icon">📘</span> Course Info</a>
+        <a href="#team"><span class="menu-icon">👥</span> Team Members</a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-logos">
+            <div class="hero-logo-box">
+                <img src="assets/logos/univ logo.png" alt="University Logo" loading="lazy">
+            </div>
+            <div class="hero-logo-box">
+                <img src="assets/logos/collage logo.png" alt="College Logo" loading="lazy">
+            </div>
+        </div>
+        <div class="hero-badge">❄️ Thermodynamics Project</div>
+        <h1>Peltier-Based<br>Portable AC</h1>
+        <p class="hero-subtitle">
+            A solid-state thermoelectric cooling system — silent, sustainable, and eco-friendly personal air conditioning.
+        </p>
+        <a href="#idea" class="hero-cta">Explore Project ↓</a>
+        <div class="hero-scroll-hint" aria-hidden="true">↓</div>
+    </section>
+
+    <!-- ============ PROJECT IDEA ============ -->
+    <section class="section" id="idea">
+        <div class="section-header reveal">
+            <div class="section-label">💡 01</div>
+            <h2 class="section-title">Project Idea</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="content-card reveal">
+            <h3>Compact Peltier-Based Air Cooling System</h3>
+            <p>Our project focuses on the development of a localized, solid-state air cooler utilizing the
+                thermoelectric (Peltier) effect. By applying DC power, the system creates a high-efficiency
+                thermal gradient to chill incoming air without the need for chemical refrigerants or mechanical
+                compressors. This eco-friendly design integrates precision heat sinks and high-speed fans to
+                deliver a constant stream of cold air for personal workstations, providing a silent and
+                sustainable alternative to traditional cooling methods.</p>
+        </div>
+
+        <div class="image-grid grid-3 reveal-children">
+            <div class="image-card">
+                <img src="assets/images/image1.jpg" alt="Peltier cooling concept" loading="lazy">
+            </div>
+            <div class="image-card">
+                <img src="assets/images/image2.jpg" alt="System design overview" loading="lazy">
+            </div>
+            <div class="image-card">
+                <img src="assets/images/image3.jpg" alt="Component layout" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PLANNING ============ -->
+    <section class="section" id="planning">
+        <div class="section-header reveal">
+            <div class="section-label">📋 02</div>
+            <h2 class="section-title">Planning</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="content-card reveal" id="text2">
+            <p>text2</p>
+        </div>
+
+        <div class="image-grid grid-3 reveal-children">
+            <div class="image-card">
+                <img src="(Bulk 1) image/4.png" alt="Planning diagram 1" loading="lazy">
+            </div>
+            <div class="image-card">
+                <img src="(Bulk 1) image/5.png" alt="Planning diagram 2" loading="lazy">
+            </div>
+            <div class="image-card">
+                <img src="(Bulk 1) image/6.png" alt="Planning diagram 3" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXECUTION STEPS ============ -->
+    <section class="section" id="steps">
+        <div class="section-header reveal">
+            <div class="section-label">⚙️ 03</div>
+            <h2 class="section-title">Execution Steps</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="content-card reveal" id="text3">
+            <p>text3</p>
+        </div>
+
+        <div class="steps-grid reveal-children">
+            <div class="step-card">
+                <div class="step-card-img">
+                    <img src="(Bulk 1) image/7.png" alt="Step 1" loading="lazy">
                 </div>
-                <div class="logo-box">
-                    <img src="assets/logos/collage logo.png" alt="College Logo">
+                <div class="step-card-body">
+                    <div class="step-number">1</div>
+                    <p id="text4">text4</p>
                 </div>
             </div>
-            <h1>Peltier-Based Portable AC <span class="subtitle">Thermodynamics Project</span></h1>
-            <nav class="tabs-nav">
-                <button class="tab-btn active" data-tab="tab-idea">Project Idea</button>
-                <button class="tab-btn" data-tab="tab-plan">Planning</button>
-                <button class="tab-btn" data-tab="tab-steps">Execution Steps</button>
-                <button class="tab-btn" data-tab="tab-course">Course Information</button>
-                <button class="tab-btn" data-tab="tab-team">Team Members</button>
-            </nav>
-        </header>
 
-        <main class="content-area">
-            <section id="tab-idea" class="tab-content active">
-                <h2>Project Idea</h2>
-                <div class="large-text-box" id="text1">
-                    <h3>Compact Peltier-Based Air Cooling System</h3>
-                    <p>Our project focuses on the development of a localized, solid-state air cooler utilizing the
-                        thermoelectric (Peltier) effect. By applying DC power, the system creates a high-efficiency
-                        thermal gradient to chill incoming air without the need for chemical refrigerants or mechanical
-                        compressors. This eco-friendly design integrates precision heat sinks and high-speed fans to
-                        deliver a constant stream of cold air for personal workstations, providing a silent and
-                        sustainable alternative to traditional cooling methods.</p>
+            <div class="step-card">
+                <div class="step-card-img">
+                    <img src="(Bulk 1) image/8.png" alt="Step 2" loading="lazy">
                 </div>
-                <div class="images-grid-3">
-                    <div class="image-box">
-                        <img src="assets/images/image1.jpg" alt="Idea Image 1">
-                    </div>
-                    <div class="image-box">
-                        <img src="assets/images/image2.jpg" alt="Idea Image 2">
-                    </div>
-                    <div class="image-box">
-                        <img src="assets/images/image3.jpg" alt="Idea Image 3">
-                    </div>
+                <div class="step-card-body">
+                    <div class="step-number">2</div>
+                    <p id="text5">text5</p>
                 </div>
-            </section>
+            </div>
 
-            <section id="tab-plan" class="tab-content">
-                <h2>Planning</h2>
-                <div class="large-text-box" id="text2">
-                    <p>text2</p>
+            <div class="step-card">
+                <div class="step-card-img">
+                    <img src="(Bulk 1) image/9.png" alt="Step 3" loading="lazy">
                 </div>
-                <div class="images-grid-3">
-                    <div class="image-box">
-                        <img src="(Bulk 1) image/4.png" alt="Plan Image 1">
-                    </div>
-                    <div class="image-box">
-                        <img src="(Bulk 1) image/5.png" alt="Plan Image 2">
-                    </div>
-                    <div class="image-box">
-                        <img src="(Bulk 1) image/6.png" alt="Plan Image 3">
-                    </div>
+                <div class="step-card-body">
+                    <div class="step-number">3</div>
+                    <p id="text6">text6</p>
                 </div>
-            </section>
+            </div>
 
-            <section id="tab-steps" class="tab-content">
-                <h2>Execution Steps</h2>
-                <div class="large-text-box" id="text3">
-                    <p>text3</p>
+            <div class="step-card">
+                <div class="step-card-img">
+                    <img src="(Bulk 1) image/10.png" alt="Step 4" loading="lazy">
                 </div>
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-text" id="text4">
-                            <p>text4</p>
-                        </div>
-                        <div class="step-img-box"><img src="(Bulk 1) image/7.png" alt="Step 1"></div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-text" id="text5">
-                            <p>text5</p>
-                        </div>
-                        <div class="step-img-box"><img src="(Bulk 1) image/8.png" alt="Step 2"></div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-text" id="text6">
-                            <p>text6</p>
-                        </div>
-                        <div class="step-img-box"><img src="(Bulk 1) image/9.png" alt="Step 3"></div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-text" id="text7">
-                            <p>text7</p>
-                        </div>
-                        <div class="step-img-box"><img src="(Bulk 1) image/10.png" alt="Step 4"></div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-text" id="text8">
-                            <p>text8</p>
-                        </div>
-                        <div class="step-img-box"><img src="(Bulk 1) image/11.png" alt="Step 5"></div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-text" id="text9">
-                            <p>text9</p>
-                        </div>
-                        <div class="step-img-box"><img src="(Bulk 1) image/12.png" alt="Step 6"></div>
-                    </div>
+                <div class="step-card-body">
+                    <div class="step-number">4</div>
+                    <p id="text7">text7</p>
                 </div>
-            </section>
+            </div>
 
-            <section id="tab-course" class="tab-content">
-                <h2>Course Information</h2>
-                <div class="course-info-container">
-                    <div class="info-card">
-                        <div class="info-icon">📘</div>
-                        <div class="info-label">Course Name</div>
-                        <div class="info-value">MEC 131 - Thermodynamics</div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">👨‍🏫</div>
-                        <div class="info-label">Instructor</div>
-                        <div class="info-value">Prof. Osama Ahmed Ali Al-Samni</div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">🎓</div>
-                        <div class="info-label">Teaching Assistant</div>
-                        <div class="info-value">Yahia Abdelhai Mokhtar Ibrahim</div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">📅</div>
-                        <div class="info-label">Semester</div>
-                        <div class="info-value">Spring 2025-2026</div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">🏛️</div>
-                        <div class="info-label">Department</div>
-                        <div class="info-value">Mechatronics Engineering</div>
-                    </div>
+            <div class="step-card">
+                <div class="step-card-img">
+                    <img src="(Bulk 1) image/11.png" alt="Step 5" loading="lazy">
                 </div>
-            </section>
-
-            <section id="tab-team" class="tab-content">
-                <h2>Team Members</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <h3 dir="rtl">👨 حسن السيد السيد محمد عجيزة</h3>
-                        <p>ID: 1241219</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👩 منة الله محمد إبراهيم العشري</h3>
-                        <p>ID: 1241003</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👨 عمر شاكر عاطف علي</h3>
-                        <p>ID: 1241061</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👨 محمود احمد عبد الشكور ابراهيم</h3>
-                        <p>ID: 1241510</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👩 نورهان محمود عبده محمد</h3>
-                        <p>ID: 1241200</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👩 روان عادل الجوهري حسين</h3>
-                        <p>ID: 1241058</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👩 رغد وائل المتولى السيد</h3>
-                        <p>ID: 1241520</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👩 جودى محمد السيد السيد طارة</h3>
-                        <p>ID: 1241397</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👨 محمد ابراهيم عبد الرازق ابراهيم القاضي</h3>
-                        <p>ID: 1241141</p>
-                    </div>
-                    <div class="team-member">
-                        <h3 dir="rtl">👨 عمر يوسف عبدالله ابراهيم</h3>
-                        <p>ID: 1241419</p>
-                    </div>
+                <div class="step-card-body">
+                    <div class="step-number">5</div>
+                    <p id="text8">text8</p>
                 </div>
-            </section>
-        </main>
+            </div>
 
-        <footer>
-            <p>Created by Omar El Shazly</p>
-            <p>Email: omairelshazly@gmail.com</p>
-        </footer>
-    </div>
+            <div class="step-card">
+                <div class="step-card-img">
+                    <img src="(Bulk 1) image/12.png" alt="Step 6" loading="lazy">
+                </div>
+                <div class="step-card-body">
+                    <div class="step-number">6</div>
+                    <p id="text9">text9</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ RESULTS ============ -->
+    <section class="section" id="results">
+        <div class="section-header reveal">
+            <div class="section-label">📊 04</div>
+            <h2 class="section-title">Results</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="results-content">
+            <div class="content-card reveal" id="textResults">
+                <p>Results description — replace this placeholder with your project results and findings.</p>
+            </div>
+
+            <div class="image-grid reveal-children">
+                <div class="image-card">
+                    <img src="(Bulk 1) image/13.png" alt="Result photo 1" loading="lazy">
+                </div>
+                <div class="image-card">
+                    <img src="(Bulk 1) image/14.png" alt="Result photo 2" loading="lazy">
+                </div>
+                <div class="image-card">
+                    <img src="(Bulk 1) image/15.png" alt="Result photo 3" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Google Drive Video Link -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="drive-link-card reveal" id="driveVideoLink">
+                <div class="drive-icon">▶️</div>
+                <div class="drive-link-text">
+                    <strong>Watch Project Video</strong>
+                    <span>Open in Google Drive — replace the href with your Drive link</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============ COURSE INFORMATION ============ -->
+    <section class="section" id="course">
+        <div class="section-header reveal">
+            <div class="section-label">📘 05</div>
+            <h2 class="section-title">Course Information</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="info-grid reveal-children">
+            <div class="info-card">
+                <div class="info-card-icon">📘</div>
+                <div class="info-card-content">
+                    <span class="info-card-label">Course Name</span>
+                    <span class="info-card-value">MEC 131 — Thermodynamics</span>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-icon">👨‍🏫</div>
+                <div class="info-card-content">
+                    <span class="info-card-label">Instructor</span>
+                    <span class="info-card-value">Prof. Osama Ahmed Ali Al-Samni</span>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-icon">🎓</div>
+                <div class="info-card-content">
+                    <span class="info-card-label">Teaching Assistant</span>
+                    <span class="info-card-value">Yahia Abdelhai Mokhtar Ibrahim</span>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-icon">📅</div>
+                <div class="info-card-content">
+                    <span class="info-card-label">Semester</span>
+                    <span class="info-card-value">Spring 2025-2026</span>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-icon">🏛️</div>
+                <div class="info-card-content">
+                    <span class="info-card-label">Department</span>
+                    <span class="info-card-value">Mechatronics Engineering</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TEAM MEMBERS ============ -->
+    <section class="section" id="team">
+        <div class="section-header reveal">
+            <div class="section-label">👥 06</div>
+            <h2 class="section-title">Team Members</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="team-grid reveal-children">
+            <div class="team-card">
+                <div class="team-avatar">👨</div>
+                <h3>حسن السيد السيد محمد عجيزة</h3>
+                <span class="team-id">1241219</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👩</div>
+                <h3>منة الله محمد إبراهيم العشري</h3>
+                <span class="team-id">1241003</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨</div>
+                <h3>عمر شاكر عاطف علي</h3>
+                <span class="team-id">1241061</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨</div>
+                <h3>محمود احمد عبد الشكور ابراهيم</h3>
+                <span class="team-id">1241510</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👩</div>
+                <h3>نورهان محمود عبده محمد</h3>
+                <span class="team-id">1241200</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👩</div>
+                <h3>روان عادل الجوهري حسين</h3>
+                <span class="team-id">1241058</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👩</div>
+                <h3>رغد وائل المتولى السيد</h3>
+                <span class="team-id">1241520</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👩</div>
+                <h3>جودى محمد السيد السيد طارة</h3>
+                <span class="team-id">1241397</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨</div>
+                <h3>محمد ابراهيم عبد الرازق ابراهيم القاضي</h3>
+                <span class="team-id">1241141</span>
+            </div>
+
+            <div class="team-card">
+                <div class="team-avatar">👨</div>
+                <h3>عمر يوسف عبدالله ابراهيم</h3>
+                <span class="team-id">1241419</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <p>Created by <strong>Omar El Shazly</strong></p>
+        <p>Email: <a href="mailto:omairelshazly@gmail.com">omairelshazly@gmail.com</a></p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
