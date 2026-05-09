@@ -158,6 +158,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========================================
+    // VIDEO MODAL
+    // ========================================
+    const videoPillBtn = document.getElementById('videoPillBtn');
+    const videoModal = document.getElementById('videoModal');
+    const videoModalClose = document.getElementById('videoModalClose');
+    const videoModalBackdrop = document.getElementById('videoModalBackdrop');
+    const videoIframe = document.getElementById('videoIframe');
+
+    if (videoPillBtn && videoModal) {
+        function openVideoModal() {
+            // Load the iframe src only when opened (lazy load)
+            videoIframe.src = videoIframe.getAttribute('data-src');
+            videoModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            videoModal.classList.remove('open');
+            document.body.style.overflow = '';
+            // Stop the video by clearing the src
+            videoIframe.src = '';
+        }
+
+        videoPillBtn.addEventListener('click', openVideoModal);
+        videoModalClose.addEventListener('click', closeVideoModal);
+        videoModalBackdrop.addEventListener('click', closeVideoModal);
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModal.classList.contains('open')) {
+                closeVideoModal();
+            }
+        });
+    }
+
+    // ========================================
     // INITIAL STATE
     // ========================================
     updateActiveLink();
