@@ -128,6 +128,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========================================
+    // LIGHTBOX
+    // ========================================
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const allImages = document.querySelectorAll('.image-card img, .step-card-img img');
+
+        allImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // ========================================
     // INITIAL STATE
     // ========================================
     updateActiveLink();
